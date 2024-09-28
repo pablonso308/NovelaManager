@@ -20,11 +20,37 @@ public class Novel {
         this.synopsis = synopsis;
     }
 
-    public int getId() { return id; }
-    public String getTitle() { return title; }
-    public String getAuthor() { return author; }
-    public int getYear() { return year; }
-    public String getSynopsis() { return synopsis; }
+    public int getId() {
+        return id;
+    }
 
-    public void setId(int id) { this.id = id; }
+    public String getTitle() {
+        return title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public String getSynopsis() {
+        return synopsis;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    private boolean isFavorite;
+
+    public boolean isFavorite() {
+        return isFavorite;
+    }
+
+    public void setFavorite(boolean favorite) {
+        this.isFavorite = favorite;
+    }
 }

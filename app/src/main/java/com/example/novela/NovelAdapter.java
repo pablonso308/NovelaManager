@@ -1,6 +1,5 @@
 package com.example.novela;
 
-package com.example.novelmanager;
 
 import android.content.Context;
 import android.content.Intent;
