@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -31,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
-        novelAdapter = new NovelAdapter();
+        novelAdapter = new NovelAdapter(this, novelViewModel);
         recyclerView.setAdapter(novelAdapter);
 
         novelViewModel = new ViewModelProvider(this).get(NovelViewModel.class);
@@ -46,8 +47,10 @@ public class MainActivity extends AppCompatActivity {
         buttonAddBook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Implementar la lógica para agregar una nueva novela
+                Intent intent = new Intent(MainActivity.this, AddNovelActivity.class);
+                startActivity(intent);
             }
         });
+
     }
 }
