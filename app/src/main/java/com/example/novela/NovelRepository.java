@@ -30,4 +30,12 @@ public class NovelRepository {
     public LiveData<List<Novel>> getAllNovels() {
         return allNovels;
     }
+
+    public void update(Novel novel) {
+        executorService.execute(() -> novelDao.update(novel));
+    }
+
+    public Novel getNovelById(int novelId) {
+        return novelDao.getNovelById(novelId);
+    }
 }

@@ -28,4 +28,13 @@ public class NovelViewModel extends AndroidViewModel {
     public void delete(Novel novel) {
         repository.delete(novel);
     }
+
+
+    public void update(Novel novel) {
+        repository.update(novel);
+    }
+
+    public Novel getNovelById(int novelId) {
+        return repository.getNovelById(novelId);
+    }
 }
